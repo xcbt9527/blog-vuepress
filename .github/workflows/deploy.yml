@@ -1,0 +1,19 @@
+name: GitHub Actions Build Blog
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 切换分支
+        uses: actions/checkout@master
+
+      - name: 打包和构建
+        uses: JamesIves/github-pages-deploy-action@master
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: dist
+          FOLDER: .vuepress/dist
+          BUILD_SCRIPT: npm install && npm run docs:build

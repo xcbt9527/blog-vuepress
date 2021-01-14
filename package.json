@@ -1,0 +1,16 @@
+{
+  "name": "blog-vuepress",
+  "version": "1.0.0",
+  "description": "个人博客地址",
+  "main": "index.js",
+  "repository": "https://github.com/xcbt9527/blog-vuepress",
+  "author": "momo",
+  "license": "ISC",
+  "devDependencies": {
+    "vuepress": "^1.8.0"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  }
+}
